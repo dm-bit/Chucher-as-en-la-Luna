@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chucherías en la Luna</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url("fondo3.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #333;
+    }
+
+    header {
+      background-color: #fff5c2d9; /* amarillo clarito con transparencia */
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    header img {
+      max-width: 120px;
+      height: auto;
+    }
+
+    header h1 {
+      font-size: 2.3rem;
+      color: #000;
+      font-weight: bold;
+      margin: 0;
+      font-family: 'Georgia', serif;
+    }
+
+    nav {
+      background-color: #fcae91e6; /* naranja clarito con transparencia */
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: #d63333;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    .descripcion {
+      background-color: #fff5c2e0; /* igual que el header con transparencia */
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin: 2rem;
+    }
+
+    .descripcion p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .galeria-mini {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .galeria-mini img {
+      width: 140px;
+      height: auto;
+      border-radius: 10px;
+      cursor: zoom-in;
+      transition: transform 0.2s ease;
+    }
+
+    .galeria-mini img:hover {
+      transform: scale(1.05);
+    }
+
+    #lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #fcae91e6;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .contacto a {
+      color: #d63333;
+      font-weight: bold;
+      text-decoration: none;
+      display: block;
+      margin: 0.5rem 0;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .galeria-mini {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.jpg" alt="Logo Chucherías en la Luna" />
+    <h1>CHUCHERÍAS EN LA LUNA</h1>
+  </header>
+
+  <nav>
+    <a href="#menu">Menú</a>
+    <a href="#sobre-nosotros">Sobre Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="sobre-nosotros" class="descripcion">
+    <h2>Sobre Nosotros</h2>
+    <p>
+      Chucherías en la Luna es el lugar ideal para satisfacer todos tus antojos. 
+      Especializados en comida rápida de sabor irresistible, te ofrecemos una deliciosa 
+      variedad de hamburguesas, alitas, boneless, papas, snacks y más, preparados al momento 
+      con ingredientes de calidad. Cada platillo está pensado para llevarte directo a la luna 
+      con su sabor único y auténtico.
+    </p>
+    <p>
+      Ya sea que busques una comida rápida para compartir con amigos o simplemente quieras darte 
+      un gusto, en Chucherías en la Luna te garantizamos porciones generosas, precios accesibles 
+      y atención de otro planeta. ¡Descubre por qué somos el antojo favorito de muchos!
+    </p>
+
+    <!-- Galería pequeña de imágenes -->
+    <div class="galeria-mini">
+      <img src="Combo.jpg" alt="Combo" class="zoomable">
+      <img src="CREPA.jpg" alt="Crepa" class="zoomable">
+      <img src="FRAPPE.jpg" alt="Frappe" class="zoomable">
+      <img src="hamburguesa.jpg" alt="Hamburguesa" class="zoomable">
+    </div>
+  </section>
+
+  <section id="menu" class="descripcion">
+    <h2>Menú</h2>
+    <p>
+      Consulta nuestro menú completo haciendo clic aquí:
+      <a href="menu.html" target="_blank" style="color: #d63333; font-weight: bold;">Ver Menú Completo</a>
+    </p>
+  </section>
+
+  <section id="contacto" class="descripcion contacto">
+    <h2>Contacto</h2>
+    <p>Puedes escribirnos o hacer tu pedido por:</p>
+    <a href="https://wa.me/message/LWDZIWRASDVUL1" target="_blank">📱 WhatsApp: 55 3639 1932</a>
+    <a href="https://www.facebook.com/people/%F0%9D%90%B6%F0%9D%90%BB%F0%9D%91%88%F0%9D%90%B6%F0%9D%90%BB%F0%9D%90%B8%F0%9D%91%85%F0%9D%90%BC%F0%9D%90%B4%F0%9D%91%86-%F0%9D%90%B8%F0%9D%91%81-%F0%9D%90%BF%F0%9D%90%B4-%F0%9D%90%BF%F0%9D%91%88%F0%9D%91%81%F0%9D%90%B4/100076127956935/?mibextid=ZbWKwL" target="_blank">📘 Facebook</a>
+    <a href="https://maps.app.goo.gl/Noqy5oCuSyxtob5D7" target="_blank">📍 Ubicación: Calle Homún, entre Seyé y Pomuch.</a>   
+    
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Chucherías en la Luna. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    document.querySelectorAll('.zoomable').forEach(img => {
+      img.addEventListener('click', () => {
+        document.getElementById('lightbox-img').src = img.src;
+        document.getElementById('lightbox').style.display = 'flex';
+      });
+    });
+
+    document.getElementById('lightbox').addEventListener('click', () => {
+      document.getElementById('lightbox').style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
